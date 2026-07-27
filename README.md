@@ -3,3 +3,4 @@ GrupoD: Desarrollo de Portales Web 2
 
 ## Integrantes
 Ángel Fernando Córdova Montoya 0824200600869
+Edwin Rene Acosta Rodriguez 0101200504493
