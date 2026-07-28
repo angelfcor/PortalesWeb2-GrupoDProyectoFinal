@@ -8,9 +8,8 @@ permissions:
   contents: read
   pages: write
   id-token: write
-#VARIABLES DE AMBIENTE
 env:
-  DEPLOY_BASE_URL: ${{ vars.DEPLOY_BASE_URL}} 
+  DEPLOY_BASE_URL: ${{ vars.DEPLOY_BASE_URL}}
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -34,7 +33,7 @@ jobs:
         run: npm run build
       - name: Configurar Github Pages para Publicar
         uses: actions/configure-pages@v5
-      - name: Subir los Compilados (DIST)
+      - name: Subir los compilados (DIST)
         uses: actions/upload-pages-artifact@v4
         with:
           path: './dist'
