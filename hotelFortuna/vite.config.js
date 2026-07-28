@@ -18,7 +18,7 @@ function obtenerHtmlFiles() {
                     file.slice(0, file.length - path.extname(file).length),
                     resolve(__dirname, file),
                 ];
-            }),
+            })
     );
 }
 
@@ -27,19 +27,21 @@ export default defineConfig({
     base: process.env.DEPLOY_BASE_URL ?? '/',
     build: {
         rolldownOptions: {
-            input: obtenerHtmlFiles(),
-        },
+            input: obtenerHtmlFiles()
+        }
     },
     plugins: [
         HandlebarPlugin({
-            partialDirectory: resolve(__dirname, "src/partials"),
-            context: (page) => {
-                console.log(`Cargando contexto de: ${page}`);
-                let context = getPageContext(page);
-                console.log(JSON.stringify(context, null, 2));
-                return context;
-            },
-        }),
-        HtmlCssPurgePlugin(),
-    ],
-});
+                partialDirectory: resolve(__dirname, "src/partials"),
+                context: (page) => {
+                    console.log(`Cargando contexto de: ${page}`);
+                    let context = getPageContext(page);
+                    console.log(JSON.stringify(context, null, 2));
+                    return context;
+                }
+            }   
+        ),
+        HtmlCssPurgePlugin()
+    ]
+}
+);
