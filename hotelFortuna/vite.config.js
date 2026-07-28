@@ -5,7 +5,7 @@ import * as glob from "glob";
 import HtmlCssPurgePlugin from "vite-plugin-purgecss";
 import HandlebarPlugin from "vite-plugin-handlebars";
 
-import getPageContext from "./src/data/index";
+import getPageContext from "./src/data/";
 
 function obtenerHtmlFiles() {
     return Object.fromEntries(
