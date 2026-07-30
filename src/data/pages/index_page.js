@@ -53,6 +53,27 @@ export default {
         telefono2: "8973-7935",
     },
 
+    promociones: [
+    {
+        titulo: "Escapada Romántica",
+        descripcion: "20% de descuento para parejas durante fines de semana.",
+        precio: "880.00",
+        imagen: "/img/room.jpeg"
+    },
+    {
+        titulo: "3 Noches por 2",
+        descripcion: "Hospédate tres noches y paga solamente dos.",
+        precio: "2200.00",
+        imagen: "/img/balcony.jpeg"
+    },
+    {
+        titulo: "Luna de Miel",
+        descripcion: "Decoración especial y desayuno incluido.",
+        precio: "1800.00",
+        imagen: "/img/panoramic.jpeg"
+    }
+],
+
     galeria: [
         {
             card_title: "Recepción",
