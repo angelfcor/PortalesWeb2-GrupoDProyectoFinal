@@ -23,6 +23,21 @@
         padding: 2rem 0 4rem;
     }
 
+    &__body-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+
+        @media (min-width: 768px) {
+            grid-template-columns: 5fr 7fr;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__section-title {
         font-family: @font-primary;
         font-size: 1.5rem;
@@ -70,6 +85,7 @@
 
         input,
         textarea {
+            width: 100%;
             padding: 0.65rem 0.8rem;
             border: 1px solid darken(@primary-background-color, 15%);
             border-radius: 6px;
@@ -122,9 +138,4 @@
             display: block;
         }
     }
-}
-
-.contacto__block {
-    display: flex;
-    flex-direction: column;
 }

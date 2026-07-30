@@ -27,36 +27,28 @@
       </section>
 
       <section class="nosotros__historia">
-        <div class="content">
-          <div class="grid">
-            <div class="row align-items-center gap-4">
-              <div class="col-12 col-md-6">
-                <div class="nosotros__historia-text">
-                  <h2 class="nosotros__section-title">Quiénes somos</h2>
-                  <p class="nosotros__text">
-                    Desde nuestros inicios nos hemos dedicado a ofrecer un
-                    espacio cómodo, limpio y discreto para quienes buscan
-                    hospedaje por horas o por noche en el centro de la ciudad.
-                    Cada rincón del hotel está pensado para que te sientas
-                    tranquilo y bien atendido.
-                  </p>
-                  <p class="nosotros__text">
-                    Contamos con habitaciones equipadas, personal disponible
-                    las 24 horas y una ubicación privilegiada cerca de los
-                    principales puntos de la ciudad.
-                  </p>
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <img
-                  src="/img/reception.jpeg"
-                  alt="Área de recepción de Hotel Fortuna"
-                  class="cover-img nosotros__historia-img"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+        <div class="content nosotros__historia-grid">
+          <div class="nosotros__historia-text">
+            <h2 class="nosotros__section-title">Quiénes somos</h2>
+            <p class="nosotros__text">
+              Desde nuestros inicios nos hemos dedicado a ofrecer un
+              espacio cómodo, limpio y discreto para quienes buscan
+              hospedaje por horas o por noche en el centro de la ciudad.
+              Cada rincón del hotel está pensado para que te sientas
+              tranquilo y bien atendido.
+            </p>
+            <p class="nosotros__text">
+              Contamos con habitaciones equipadas, personal disponible
+              las 24 horas y una ubicación privilegiada cerca de los
+              principales puntos de la ciudad.
+            </p>
           </div>
+          <img
+            src="/img/reception.jpeg"
+            alt="Área de recepción de Hotel Fortuna"
+            class="nosotros__historia-img"
+            loading="lazy"
+          />
         </div>
       </section>
 
@@ -65,19 +57,15 @@
           <h2 class="nosotros__section-title nosotros__section-title--center">
             Nuestros valores
           </h2>
-          <div class="grid">
-            <div class="row justify-center gap-4">
-              {{#each valores}}
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="nosotros__valor-card">
-                  <h3 class="nosotros__valor-titulo">{{valor_titulo}}</h3>
-                  <p class="nosotros__valor-descripcion">
-                    {{valor_descripcion}}
-                  </p>
-                </div>
-              </div>
-              {{/each}}
+          <div class="nosotros__valores-grid">
+            {{#each valores}}
+            <div class="nosotros__valor-card">
+              <h3 class="nosotros__valor-titulo">{{valor_titulo}}</h3>
+              <p class="nosotros__valor-descripcion">
+                {{valor_descripcion}}
+              </p>
             </div>
+            {{/each}}
           </div>
         </div>
       </section>
