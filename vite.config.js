@@ -32,7 +32,7 @@ export default defineConfig(
         appType: 'mpa',
         base: process.env.DEPLOY_BASE_URL ?? '/',
         build: {
-            rolldownOptions: {
+            rollupOptions: {
                 input: obtenerHtmlFiles()
             }
         },
