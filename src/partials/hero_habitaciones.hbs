@@ -1,0 +1,18 @@
+<section class="hero-carrusel">
+    <div class="hero-carrusel__slides">
+        {{#each carrusel}}
+            <img src="{{this}}" alt="Habitación Hotel Fortuna" class="hero-carrusel__slide {{#if @first}}is-active{{/if}}" loading="lazy"/>
+        {{/each}}
+    </div>
+    <div class="hero-carrusel__overlay"></div>
+    <div class="hero-carrusel__content">
+        <h1 class="hero-carrusel__titulo">Descubre Más!</h1>
+        <p class="hero-carrusel__subtitulo">Comodidad y privacidad en el corazón de Tegucigalpa</p>
+        <a href="#galeria" class="hero-carrusel__cta">Ver Habitación</a>
+    </div>
+    <div class="hero-carrusel__dots">
+        {{#each carrusel}}
+            <span class="hero-carrusel__dot {{#if @first}}is-active{{/if}}"></span>
+        {{/each}}
+    </div>
+</section>
