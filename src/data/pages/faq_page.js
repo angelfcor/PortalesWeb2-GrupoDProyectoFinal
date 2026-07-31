@@ -21,7 +21,7 @@ export default {
         },
         {
             pregunta: "¿Cuál es el horario de check-in y check-out?",
-            respuesta: "El check-in es a partir de las 3:00 p.m. y el check-out antes de las 12:00 p.m. También contamos con tarifas por horas si necesitas mayor flexibilidad.",
+            respuesta: "Contamos con horarios flexibles a como guste el cliente y según cuántos días se quede. Además, ofrecemos tarifas por horas si necesitas mayor flexibilidad.",
         },
         {
             pregunta: "¿Se permite el ingreso de mascotas?",
