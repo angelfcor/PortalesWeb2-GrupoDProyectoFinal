@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservaciones | Hotel Fortuna</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="src/less/reservaciones.css">
+
+</head>
+<body>
+
+<section class="hero">
+    <h1>Reserva tu Estadía</h1>
+    <p>Vive una experiencia única en Hotel Fortuna.</p>
+</section>
+
+<section class="reservacion">
+
+    <div class="formulario">
+
+        <h2>Formulario de Reservación</h2>
+
+        <form id="formReserva">
+
+            <div class="fila">
+
+                <div class="campo">
+                    <label>Nombre Completo</label>
+                    <input id="nombre" type="text" placeholder="Juan Pérez">
+                </div>
+
+                <div class="campo">
+                    <label>Correo Electrónico</label>
+                    <input id="correo" type="email" placeholder="correo@email.com">
+                </div>
+
+            </div>
+
+            <div class="fila">
+
+                <div class="campo">
+                    <label>Teléfono</label>
+                    <input id="telefono" type="text" placeholder="+504">
+                </div>
+
+                <div class="campo">
+                    <label>Habitación</label>
+
+                    <select id="habitacion">
+                        <option value="">Seleccione...</option>
+                        <option>Suite Deluxe</option>
+                        <option>Habitación Doble</option>
+                        <option>Habitación Familiar</option>
+                        <option>Habitación Premium</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="fila">
+
+                <div class="campo">
+                    <label>Fecha de Entrada</label>
+                    <input id="entrada" type="date">
+                </div>
+
+                <div class="campo">
+                    <label>Fecha de Salida</label>
+                    <input id="salida" type="date">
+                </div>
+
+            </div>
+
+            <div class="fila">
+
+                <div class="campo">
+                    <label>Adultos</label>
+                    <input id="adultos" type="number" min="1" value="2">
+                </div>
+
+                <div class="campo">
+                    <label>Niños</label>
+                    <input id="ninos" type="number" min="0" value="0">
+                </div>
+
+            </div>
+
+            <div class="campo">
+                <label>Solicitudes Especiales</label>
+                <textarea id="comentarios" rows="5"></textarea>
+            </div>
+
+            <button class="btn" type="submit">
+                Confirmar Reservación
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<script type="module" src="/src/js/main.js"></script>
+
+</body>
+</html>
