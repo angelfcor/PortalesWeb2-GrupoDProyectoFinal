@@ -1,0 +1,209 @@
+@font-primary: 'Cormorant Garamond', serif;
+@font-secondary: 'Inter', sans-serif;
+
+@toffee-brown:#9c5d3c;
+@pale-oak:#d1c7b5;
+@dark-goldenrod:#b07e1e;
+@dark-coffee:#382c23;
+
+.reservacion{
+
+    background:@pale-oak;
+    padding:80px 20px;
+    display:flex;
+    justify-content:center;
+
+}
+
+.formulario{
+
+    width:100%;
+    max-width:950px;
+
+    background:@dark-coffee;
+    color:white;
+
+    padding:50px;
+
+    border-radius:20px;
+
+    border:1.5px solid fade(@dark-goldenrod,60%);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.25),
+        0 0 20px fade(@dark-goldenrod,12%);
+
+}
+
+.formulario h2{
+
+    font-family:@font-primary;
+    color:white;
+    font-size:3.3rem;
+    text-align:center;
+    margin-bottom:45px;
+    position:relative;
+
+}
+
+.formulario h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:3px;
+
+    background:@dark-goldenrod;
+
+    margin:18px auto 0;
+
+    border-radius:50px;
+
+}
+
+.fila{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-bottom:25px;
+
+}
+
+.campo{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.campo label{
+
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    margin-bottom:10px;
+
+}
+
+.campo input,
+.campo select,
+.campo textarea{
+
+    width:100%;
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(255,255,255,.06);
+
+    color:white;
+
+    font-size:1rem;
+
+    font-family:@font-secondary;
+
+    transition:.3s;
+
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder{
+
+    color:rgba(255,255,255,.55);
+
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus{
+
+    outline:none;
+
+    border-color:@dark-goldenrod;
+
+    box-shadow:0 0 12px fade(@dark-goldenrod,40%);
+
+}
+
+.campo textarea{
+
+    resize:none;
+    min-height:150px;
+
+}
+
+select{
+
+    color:white;
+
+}
+
+option{
+
+    color:black;
+
+}
+
+.btn{
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:@dark-goldenrod;
+
+    color:white;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.btn:hover{
+
+    background:lighten(@dark-goldenrod,8%);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 18px fade(@dark-goldenrod,35%);
+
+}
+
+@media(max-width:768px){
+
+    .formulario{
+
+        padding:30px;
+
+    }
+
+    .formulario h2{
+
+        font-size:2.5rem;
+
+    }
+
+    .fila{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

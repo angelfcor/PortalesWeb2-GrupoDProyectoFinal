@@ -1,0 +1,99 @@
+<section class="hero">
+    <div class="hero__overlay">
+        <div class="content hero__content">
+            <h1 class="hero__title">{{banner_title}}</h1>
+            <p class="hero__subtitle">{{banner_subtitle}}</p>
+        </div>
+    </div>
+</section>
+
+<section class="reservacion">
+
+    <div class="formulario">
+
+        <h2>{{formulario.titulo}}</h2>
+
+        <form id="formReserva">
+
+            <div class="fila">
+
+                <div class="campo">
+                    <label>Nombre Completo</label>
+                    <input id="nombre" type="text" placeholder="Juan Pérez">
+                </div>
+
+                <div class="campo">
+                    <label>Correo Electrónico</label>
+                    <input id="correo" type="email" placeholder="correo@email.com">
+                </div>
+
+            </div>
+
+            <div class="fila">
+
+                <div class="campo">
+                    <label>Teléfono</label>
+                    <input id="telefono" type="text" placeholder="+504">
+                </div>
+
+                <div class="campo">
+                    <label>Habitación</label>
+
+                    <select id="habitacion">
+
+                        <option value="">Seleccione...</option>
+
+                        {{#each habitaciones}}
+
+                        <option>{{this}}</option>
+
+                        {{/each}}
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="fila">
+
+                <div class="campo">
+                    <label>Fecha de Entrada</label>
+                    <input id="entrada" type="date">
+                </div>
+
+                <div class="campo">
+                    <label>Fecha de Salida</label>
+                    <input id="salida" type="date">
+                </div>
+
+            </div>
+
+            <div class="fila">
+
+                <div class="campo">
+                    <label>Adultos</label>
+                    <input id="adultos" type="number" min="1" value="2">
+                </div>
+
+                <div class="campo">
+                    <label>Niños</label>
+                    <input id="ninos" type="number" min="0" value="0">
+                </div>
+
+            </div>
+
+            <div class="campo">
+                <label>Solicitudes Especiales</label>
+                <textarea id="comentarios"></textarea>
+            </div>
+
+            <button class="btn" type="submit">
+                {{formulario.boton}}
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
