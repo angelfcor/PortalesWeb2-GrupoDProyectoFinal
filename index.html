@@ -1,13 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hotelfortuna</title>
+    <title>Hotel Fortuna</title>
+    <link rel="stylesheet" href="/src/less/style.less" />
   </head>
-  <body>
-    <div id="app"></div>
+<body>
+    {{> header}}
+    <main>
+        {{> hero}}
+        {{> cardholder}}
+        {{> testimonios_index}}
+    </main>
+    {{> footer}}
     <script type="module" src="/src/js/main.js"></script>
-  </body>
+</body>
 </html>

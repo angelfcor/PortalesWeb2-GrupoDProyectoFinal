@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contáctanos: dirección, teléfonos y formulario de contacto de Hotel Fortuna en Tegucigalpa."
+    />
+    <title>Contacto | Hotel Fortuna</title>
+    <link rel="stylesheet" href="/src/less/style.less" />
+  </head>
+  <body>
+    {{> header}}
+    <main>
+      <section class="contacto__hero">
+        <div class="content">
+          <h1 class="contacto__hero-title">Contáctanos</h1>
+          <p class="contacto__hero-subtitle">
+            Estamos para ayudarte. Escríbenos y te responderemos a la brevedad.
+          </p>
+        </div>
+      </section>
+
+      <section class="contacto__body">
+        <div class="content contacto__body-grid">
+          <div class="contacto__block">
+            <h2 class="contacto__section-title">Información de contacto</h2>
+            <address class="contacto__info">
+              <p>
+                <strong>Dirección:</strong><br />
+                {{contacto.direccion}}
+              </p>
+              <p>
+                <strong>Teléfonos:</strong><br />
+                <a href="tel:+50497335556">{{contacto.telefono1}}</a> /
+                <a href="tel:+50489737935">{{contacto.telefono2}}</a>
+              </p>
+              <p>
+                <strong>Correo:</strong><br />
+                <a href="mailto:{{contacto.correo}}">{{contacto.correo}}</a>
+              </p>
+              <p><strong>Horario:</strong><br />{{contacto.horario}}</p>
+            </address>
+          </div>
+
+          <div class="contacto__block">
+            <h2 class="contacto__section-title">Envíanos un mensaje</h2>
+            <form id="contact-form" class="contacto__form" novalidate>
+              <div class="contacto__form-group">
+                <label for="nombre">Nombre completo</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  required
+                  minlength="3"
+                  aria-describedby="error-nombre"
+                />
+                <span id="error-nombre" class="contacto__form-error" role="alert"></span>
+              </div>
+
+              <div class="contacto__form-group">
+                <label for="email">Correo electrónico</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  aria-describedby="error-email"
+                />
+                <span id="error-email" class="contacto__form-error" role="alert"></span>
+              </div>
+
+              <div class="contacto__form-group">
+                <label for="telefono">Teléfono (opcional)</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  pattern="[0-9+\-\s]{8,15}"
+                  aria-describedby="error-telefono"
+                />
+                <span id="error-telefono" class="contacto__form-error" role="alert"></span>
+              </div>
+
+              <div class="contacto__form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="5"
+                  required
+                  minlength="10"
+                  aria-describedby="error-mensaje"
+                ></textarea>
+                <span id="error-mensaje" class="contacto__form-error" role="alert"></span>
+              </div>
+
+              <button type="submit" class="contacto__form-submit">
+                Enviar mensaje
+              </button>
+              <p id="form-status" class="contacto__form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacto__mapa">
+        <iframe
+          title="Ubicación de Hotel Fortuna en el mapa"
+          src="https://www.google.com/maps?q=Costado+Norte+Iglesia+Los+Dolores+Tegucigalpa&output=embed"
+          width="100%"
+          height="350"
+          style="border: 0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </main>
+    {{> footer}}
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

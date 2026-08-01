@@ -1,0 +1,222 @@
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    &__container {
+        .content;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__logo {
+        font-family: @font-primary;
+        font-size: 1.25rem;
+        color: @secondary-text-color;
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+    }
+
+    &__hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 101;
+
+        span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: @secondary-text-color;
+            transition: all 0.3s ease;
+        }
+
+        &.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        &.active span:nth-child(2) {
+            opacity: 0;
+        }
+        &.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__nav-list {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        a {
+            font-family: @font-secondary;
+            font-size: 0.875rem;
+            color: @secondary-text-color;
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: @accent-secondary-background-color;
+            }
+        }
+    }
+
+    &__dropdown {
+        position: relative;
+
+        &-btn {
+            background: none;
+            border: none;
+            font-family: @font-secondary;
+            font-size: 0.875rem;
+            color: @secondary-text-color;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            letter-spacing: 0.04em;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: @accent-secondary-background-color;
+            }
+
+            .arrow {
+                font-size: 0.75rem;
+                transition: transform 0.2s ease;
+            }
+        }
+
+        &:hover &-btn .arrow {
+            transform: rotate(180deg);
+        }
+
+        &-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 160px;
+            background-color: @secondary-background-color;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            border-radius: 6px;
+            padding: 0.5rem 0;
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            list-style: none;
+            z-index: 102;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            li {
+                width: 100%;
+            }
+
+            a {
+                padding: 0.6rem 1.2rem;
+                display: block;
+                width: 100%;
+                white-space: nowrap;
+                transition: background-color 0.2s ease, color 0.2s ease;
+
+                &:hover {
+                    background-color: lighten(@secondary-background-color, 8%);
+                    color: @accent-secondary-background-color;
+                }
+            }
+        }
+
+        &:hover &-menu {
+            display: flex;
+        }
+    }
+
+    &__cta {
+        font-family: @font-secondary;
+        font-size: 0.875rem;
+        background-color: @accent-background-color;
+        color: @secondary-text-color;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: @accent-secondary-background-color;
+        }
+    }
+
+    @media (max-width: #break-points[tablet]) {
+        &__hamburger {
+            display: flex;
+        }
+
+        &__nav {
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background-color: @secondary-background-color;
+            padding: 1.5rem;
+            gap: 1rem;
+
+            &.active {
+                display: flex;
+            }
+        }
+
+        &__nav-list {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        &__dropdown {
+            width: 100%;
+
+            &-btn {
+                font-size: 0.875rem;
+                padding: 0.25rem 0;
+            }
+
+            &-menu {
+                position: static;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                border-left: 2px solid @accent-background-color;
+                padding: 0.25rem 0 0.25rem 1rem;
+                margin-top: 0.5rem;
+                background-color: transparent;
+                display: flex;
+
+                a {
+                    padding: 0.4rem 0;
+                }
+            }
+        }
+    }
+}

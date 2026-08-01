@@ -1,0 +1,17 @@
+<section class="testimonios">
+    <div class="content">
+        <h2 class="testimonios__title">Lo que dicen nuestros huéspedes</h2>
+        <div class="grid">
+            <div class="row justify-center">
+                {{#each testimonios}}
+                    <div class="col-12 col-md-4">
+                        <div class="testimonio">
+                            <p class="testimonio__texto">"{{this.testimonio}}"</p>
+                            <span class="testimonio__autor">— {{this.autor}}</span>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</section>

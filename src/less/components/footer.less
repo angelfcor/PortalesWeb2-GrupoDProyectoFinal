@@ -1,0 +1,95 @@
+.footer {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        @media (max-width: #break-points[tablet]) {
+            flex-direction: column;
+        }
+    }
+
+    &__logo {
+        font-family: @font-primary;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: @secondary-text-color;
+        margin: 0 0 0.5rem;
+    }
+
+    &__tagline {
+        font-family: @font-secondary;
+        font-size: 0.875rem;
+        color: @secondary-text-color;
+        opacity: 0.7;
+        margin: 0;
+        max-width: 250px;
+        line-height: 1.6;
+    }
+
+    &__nav-title {
+        font-family: @font-secondary;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: @secondary-text-color;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 0 0 1rem;
+    }
+
+    &__nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        a {
+            font-family: @font-secondary;
+            font-size: 0.875rem;
+            color: @secondary-text-color;
+            opacity: 0.7;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__contact {
+        a, p {
+            font-family: @font-secondary;
+            font-size: 0.875rem;
+            color: @secondary-text-color;
+            text-decoration: none;
+            opacity: 0.7;
+            margin: 0 0 0.5rem;
+            line-height: 1.6;
+            display: block;
+            transition: opacity 0.2s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__bottom {
+        border-top: 1px solid rgba(209, 199, 181, 0.15);
+        padding: 1.25rem 0;
+        text-align: center;
+
+        p {
+            font-family: @font-secondary;
+            font-size: 0.8rem;
+            color: @secondary-text-color;
+            opacity: 0.5;
+            margin: 0;
+        }
+    }
+}
