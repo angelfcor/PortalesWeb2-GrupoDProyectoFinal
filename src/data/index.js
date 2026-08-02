@@ -5,10 +5,10 @@ import serviciosContext from './pages/servicios_page';
 import faqContext from './pages/faq_page';
 /*
 import habitacionesContext from './pages/habitaciones_page';
-import serviciosContext from './pages/servicios_page';
+/*import serviciosContext from './pages/servicios_page';*/
 import testimoniosContext from './pages/testimonios_page';
-import reservacionesContext from './pages/reservaciones_page';
-*/
+/*import reservacionesContext from './pages/reservaciones_page';*/
+
 export default (page) => {
     switch (page) {
         case '/index.html':
@@ -17,6 +17,9 @@ export default (page) => {
             return nosotrosContext;
         case '/contacto.html':
             return contactoContext;
+        case '/habitaciones.html':
+            return habitacionesContext;
+        /*
         case '/servicios.html':
             return serviciosContext;
         case '/faq.html':

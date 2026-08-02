@@ -1,0 +1,35 @@
+<section class="habitaciones" id="galeria">
+    <div class="content">
+        <div class="habitaciones__info">
+            <h1 class="habitaciones__nombre">{{habitacion.nombre}}</h1>
+            <p class="habitaciones__descripcion">{{habitacion.descripcion}}</p>
+            <div class="habitaciones__detalles">
+                <span class="habitaciones__detalle">👤 {{habitacion.capacidad}} personas</span>
+                <span class="habitaciones__detalle">🛏️ {{habitacion.camas}} cama</span>
+            </div>
+
+            <div class="habitaciones__amenidades">
+                {{#each habitacion.amenidades}}
+                <span class="habitaciones__amenidad">
+                    <span class="habitaciones__amenidad-icono">{{this.icono}}</span>
+                    {{this.texto}}
+                </span>
+                {{/each}}
+            </div>
+
+            <div class="habitaciones__precio-cta">
+                <span class="habitaciones__precio">HND {{habitacion.precio}} / noche</span>
+                <a class="habitaciones__cta" href="/reservaciones.html">{{habitacion.cta}}</a>
+            </div>
+        </div>
+
+        <div class="habitaciones__galeria">
+            {{#each galeria}}
+            <div class="galeria-card">
+                <img src="{{this.imagen}}" alt="{{this.etiqueta}}" class="galeria-card__img" loading="lazy" />
+                <span class="galeria-card__etiqueta">{{this.etiqueta}}</span>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
