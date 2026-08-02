@@ -7,93 +7,102 @@
     </div>
 </section>
 
-<section class="reservacion">
+<section class="reservaciones-section">
+    <div class="content">
+        <div class="reservaciones-section__card">
+            <div class="grid">
+                <div class="row">
+                    <!-- Imagen Lateral para el Formulario (Requisito de Rúbrica) -->
+                    <div class="col-12 col-md-5 p-0">
+                        <div class="reservaciones-section__side-img">
+                            <img src="{{banner_img}}" alt="Hotel Fortuna reservaciones" loading="lazy" />
+                            <div class="reservaciones-section__side-img-overlay">
+                                <h3>Tu Espacio Ideal</h3>
+                                <p>Disfruta de privacidad, comodidad y la mejor atención las 24 horas en el centro de Tegucigalpa.</p>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="formulario">
+                    <!-- Formulario de Reservación -->
+                    <div class="col-12 col-md-7">
+                        <div class="reservaciones-section__form-container">
+                            <h2>{{formulario.titulo}}</h2>
+                            <p class="subtitle">Completa tus datos y confirmaremos tu habitación al instante.</p>
 
-        <h2>{{formulario.titulo}}</h2>
-
-        <form id="formReserva">
-
-            <div class="fila">
-
-                <div class="campo">
-                    <label>Nombre Completo</label>
-                    <input id="nombre" type="text" placeholder="Juan Pérez">
+                            <form id="formReserva" class="reservaciones-form">
+                                <div class="grid">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 p-1">
+                                            <div class="campo">
+                                                <label for="nombre">Nombre Completo</label>
+                                                <input id="nombre" type="text" placeholder="Juan Pérez" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 p-1">
+                                            <div class="campo">
+                                                <label for="correo">Correo Electrónico</label>
+                                                <input id="correo" type="email" placeholder="correo@email.com" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 p-1">
+                                            <div class="campo">
+                                                <label for="telefono">Teléfono</label>
+                                                <input id="telefono" type="tel" placeholder="+504 9733-5556" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 p-1">
+                                            <div class="campo">
+                                                <label for="habitacion">Habitación</label>
+                                                <select id="habitacion" required>
+                                                    <option value="">Seleccione una opción...</option>
+                                                    {{#each habitaciones}}
+                                                    <option value="{{this}}">{{this}}</option>
+                                                    {{/each}}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 p-1">
+                                            <div class="campo">
+                                                <label for="entrada">Fecha de Entrada</label>
+                                                <input id="entrada" type="date" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 p-1">
+                                            <div class="campo">
+                                                <label for="salida">Fecha de Salida</label>
+                                                <input id="salida" type="date" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 p-1">
+                                            <div class="campo">
+                                                <label for="adultos">Adultos</label>
+                                                <input id="adultos" type="number" min="1" value="2" required />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 p-1">
+                                            <div class="campo">
+                                                <label for="ninos">Niños</label>
+                                                <input id="ninos" type="number" min="0" value="0" />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 p-1">
+                                            <div class="campo">
+                                                <label for="comentarios">Solicitudes Especiales</label>
+                                                <textarea id="comentarios" rows="3" placeholder="Detalles de llegada o preferencia de habitación..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 p-1">
+                                            <button class="btn-submit" type="submit">
+                                                {{formulario.boton}}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="campo">
-                    <label>Correo Electrónico</label>
-                    <input id="correo" type="email" placeholder="correo@email.com">
-                </div>
-
             </div>
-
-            <div class="fila">
-
-                <div class="campo">
-                    <label>Teléfono</label>
-                    <input id="telefono" type="text" placeholder="+504">
-                </div>
-
-                <div class="campo">
-                    <label>Habitación</label>
-
-                    <select id="habitacion">
-
-                        <option value="">Seleccione...</option>
-
-                        {{#each habitaciones}}
-
-                        <option>{{this}}</option>
-
-                        {{/each}}
-
-                    </select>
-
-                </div>
-
-            </div>
-
-            <div class="fila">
-
-                <div class="campo">
-                    <label>Fecha de Entrada</label>
-                    <input id="entrada" type="date">
-                </div>
-
-                <div class="campo">
-                    <label>Fecha de Salida</label>
-                    <input id="salida" type="date">
-                </div>
-
-            </div>
-
-            <div class="fila">
-
-                <div class="campo">
-                    <label>Adultos</label>
-                    <input id="adultos" type="number" min="1" value="2">
-                </div>
-
-                <div class="campo">
-                    <label>Niños</label>
-                    <input id="ninos" type="number" min="0" value="0">
-                </div>
-
-            </div>
-
-            <div class="campo">
-                <label>Solicitudes Especiales</label>
-                <textarea id="comentarios"></textarea>
-            </div>
-
-            <button class="btn" type="submit">
-                {{formulario.boton}}
-            </button>
-
-        </form>
-
+        </div>
     </div>
-
 </section>

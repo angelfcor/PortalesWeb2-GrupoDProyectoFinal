@@ -1,0 +1,137 @@
+.reservaciones-section {
+    padding: 4rem 0;
+    background-color: @primary-background-color;
+
+    &__card {
+        background-color: @secondary-background-color;
+        color: @secondary-text-color;
+        border-radius: 20px;
+        border: 1px solid fade(@accent-secondary-background-color, 40%);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 0 20px fade(@accent-secondary-background-color, 15%);
+        overflow: hidden;
+    }
+
+    &__side-img {
+        position: relative;
+        height: 100%;
+        min-height: 380px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(56, 44, 35, 0.3) 0%, rgba(56, 44, 35, 0.85) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2.5rem;
+            color: @secondary-text-color;
+
+            h3 {
+                font-family: @font-primary;
+                font-size: 2.25rem;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-family: @font-secondary;
+                font-size: 0.95rem;
+                color: fade(@secondary-text-color, 85%);
+                line-height: 1.6;
+            }
+        }
+    }
+
+    &__form-container {
+        padding: 2.5rem;
+
+        h2 {
+            font-family: @font-primary;
+            font-size: 2.5rem;
+            color: @secondary-text-color;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-family: @font-secondary;
+            font-size: 0.95rem;
+            color: fade(@secondary-text-color, 80%);
+            margin-bottom: 2rem;
+        }
+    }
+
+    .reservaciones-form {
+        .campo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.25rem;
+
+            label {
+                font-family: @font-secondary;
+                font-size: 0.875rem;
+                font-weight: 500;
+                color: @secondary-text-color;
+                margin-bottom: 0.5rem;
+            }
+
+            input,
+            select,
+            textarea {
+                width: 100%;
+                padding: 0.75rem 1rem;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                background-color: rgba(255, 255, 255, 0.05);
+                color: @secondary-text-color;
+                font-family: @font-secondary;
+                font-size: 0.9rem;
+                transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+                &::placeholder {
+                    color: fade(@secondary-text-color, 45%);
+                }
+
+                &:focus {
+                    outline: none;
+                    border-color: @accent-secondary-background-color;
+                    box-shadow: 0 0 10px fade(@accent-secondary-background-color, 40%);
+                }
+            }
+
+            option {
+                background-color: @secondary-background-color;
+                color: @secondary-text-color;
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 100px;
+            }
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 0.875rem;
+            margin-top: 1rem;
+            background-color: @accent-background-color;
+            color: @secondary-text-color;
+            border: none;
+            border-radius: 8px;
+            font-family: @font-secondary;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.25s ease, transform 0.25s ease;
+
+            &:hover {
+                background-color: @accent-secondary-background-color;
+                transform: translateY(-2px);
+            }
+        }
+    }
+}

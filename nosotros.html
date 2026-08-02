@@ -4,71 +4,14 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Conoce la historia y los valores de Hotel Fortuna, tu opción de hospedaje en el corazón de Tegucigalpa."
-    />
+    <meta name="description" content="Conoce la historia y los valores de Hotel Fortuna, tu opción de hospedaje en el corazón de Tegucigalpa." />
     <title>Nosotros | Hotel Fortuna</title>
     <link rel="stylesheet" href="/src/less/style.less" />
   </head>
   <body>
     {{> header}}
     <main>
-      <section class="nosotros__hero">
-        <div class="nosotros__hero-overlay">
-          <div class="content nosotros__hero-content">
-            <h1 class="nosotros__hero-title">Nuestra historia</h1>
-            <p class="nosotros__hero-subtitle">
-              Hotel Fortuna nació con un propósito claro: ofrecer comodidad y
-              privacidad en el corazón de Tegucigalpa.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="nosotros__historia">
-        <div class="content nosotros__historia-grid">
-          <div class="nosotros__historia-text">
-            <h2 class="nosotros__section-title">Quiénes somos</h2>
-            <p class="nosotros__text">
-              Desde nuestros inicios nos hemos dedicado a ofrecer un
-              espacio cómodo, limpio y discreto para quienes buscan
-              hospedaje por horas o por noche en el centro de la ciudad.
-              Cada rincón del hotel está pensado para que te sientas
-              tranquilo y bien atendido.
-            </p>
-            <p class="nosotros__text">
-              Contamos con habitaciones equipadas, personal disponible
-              las 24 horas y una ubicación privilegiada cerca de los
-              principales puntos de la ciudad.
-            </p>
-          </div>
-          <img
-            src="/img/reception.jpeg"
-            alt="Área de recepción de Hotel Fortuna"
-            class="nosotros__historia-img"
-            loading="lazy"
-          />
-        </div>
-      </section>
-
-      <section class="nosotros__valores">
-        <div class="content">
-          <h2 class="nosotros__section-title nosotros__section-title--center">
-            Nuestros valores
-          </h2>
-          <div class="nosotros__valores-grid">
-            {{#each valores}}
-            <div class="nosotros__valor-card">
-              <h3 class="nosotros__valor-titulo">{{valor_titulo}}</h3>
-              <p class="nosotros__valor-descripcion">
-                {{valor_descripcion}}
-              </p>
-            </div>
-            {{/each}}
-          </div>
-        </div>
-      </section>
+        {{> nosotros}}
     </main>
     {{> footer}}
     <script type="module" src="/src/js/main.js"></script>

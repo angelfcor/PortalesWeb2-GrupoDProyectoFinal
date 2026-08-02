@@ -3,7 +3,7 @@
         <div class="content hero__content">
             <h1 class="hero__title">{{banner_title}}</h1>
             <p class="hero__subtitle">{{banner_subtitle}}</p>
-            <a href="/reservaciones.html" class="hero__cta">
+            <a href="./reservaciones.html" class="hero__cta">
                 Reservar ahora
             </a>
         </div>
@@ -11,35 +11,21 @@
 </section>
 
 <section class="cardholder">
-
     <div class="content">
-
         <h2 class="cardholder__title">
             Promociones Exclusivas
         </h2>
-
         <p class="cardholder__subtitle">
             Aprovecha nuestras mejores ofertas para tu próxima estadía.
         </p>
-
         <div class="grid">
-
             <div class="row justify-center">
-
                 {{#each promociones}}
-
                 <div class="col-12 col-md-6 col-lg-4 p-3">
-
                     {{> promociones_card this}}
-
                 </div>
-
                 {{/each}}
-
             </div>
-
         </div>
-
     </div>
-
 </section>
