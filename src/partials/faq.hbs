@@ -1,0 +1,11 @@
+<section class="faq">
+    <div class="content faq__content">
+        <h2 class="faq__title">Preguntas Frecuentes</h2>
+        <p class="faq__subtitle">Todo lo que necesitas saber antes de tu visita</p>
+        <div class="faq__lista">
+            {{#each preguntas}}
+                {{> pregunta this}}
+            {{/each}}
+        </div>
+    </div>
+</section>

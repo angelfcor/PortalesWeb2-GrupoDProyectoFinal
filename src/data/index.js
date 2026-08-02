@@ -1,13 +1,16 @@
 import indexContext from './pages/index_page';
 import nosotrosContext from './pages/nosotros_page';
 import contactoContext from './pages/contacto_page';
+import serviciosContext from './pages/servicios_page';
+import faqContext from './pages/faq_page';
+/*
 import habitacionesContext from './pages/habitaciones_page';
 /*import serviciosContext from './pages/servicios_page';*/
 import testimoniosContext from './pages/testimonios_page';
 /*import reservacionesContext from './pages/reservaciones_page';*/
 
 export default (page) => {
-    switch(page) {
+    switch (page) {
         case '/index.html':
             return indexContext;
         case '/nosotros.html':
@@ -19,17 +22,20 @@ export default (page) => {
         /*
         case '/servicios.html':
             return serviciosContext;
-        case '/galeria.html':
-            return {};
-        case '/reservaciones.html':
-            return reservacionesContext;
-        case '/promociones.html':
-            return {};
         case '/faq.html':
-            return {};
+            return faqContext;
+        /*
+    case '/habitaciones.html':
+        return habitacionesContext;
+    case '/galeria.html':
+        return {};
+    case '/reservaciones.html':
+        return reservacionesContext;
+    case '/promociones.html':
+        return {};
+    case '/testimonios.html':
+        return testimoniosContext;
         */
-        case '/testimonios.html':
-            return testimoniosContext;
         default:
             return {};
     }
