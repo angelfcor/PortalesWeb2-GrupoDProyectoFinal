@@ -1,4 +1,8 @@
 export default {
+    banner_title: "Testimonios de Huéspedes",
+    banner_subtitle: "Historias reales y experiencias de quienes se hospedan en Hotel Fortuna.",
+    banner_img: "/img/balcony.jpeg",
+
     testimonios: [
         {
             avatar: "/img/usuariohombre.jpg",

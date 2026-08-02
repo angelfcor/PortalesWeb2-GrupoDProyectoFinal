@@ -38,7 +38,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to bottom, rgba(58, 46, 39, 0.3), rgba(58, 46, 39, 0.65));
+        background: linear-gradient(to bottom, fade(@secondary-background-color, 40%), fade(@secondary-background-color, 85%));
         z-index: 1;
     }
 
@@ -46,38 +46,42 @@
         position: relative;
         z-index: 2;
         text-align: center;
-        color: #FFFFFF;
+        color: @secondary-text-color;
         padding: 0 20px;
     }
 
     &__titulo {
-        font-size: 3rem;
-        font-weight: 700;
+        font-family: @font-primary;
+        font-size: 3.5rem;
+        font-weight: 600;
         margin-bottom: 12px;
 
         @media (max-width: 600px) {
-            font-size: 2rem;
+            font-size: 2.25rem;
         }
     }
 
     &__subtitulo {
+        font-family: @font-secondary;
         font-size: 1.1rem;
         margin-bottom: 24px;
-        opacity: 0.9;
+        color: fade(@secondary-text-color, 90%);
     }
 
     &__cta {
         display: inline-block;
-        background-color: #C17A4E;
-        color: #FFFFFF;
+        background-color: @accent-background-color;
+        color: @secondary-text-color;
         padding: 14px 32px;
         border-radius: 8px;
         text-decoration: none;
+        font-family: @font-secondary;
         font-weight: 600;
-        transition: background-color 0.2s ease;
+        transition: background-color 0.2s ease, transform 0.2s ease;
 
         &:hover {
-            background-color: #A8623A;
+            background-color: @accent-secondary-background-color;
+            transform: translateY(-2px);
         }
     }
 
@@ -95,18 +99,18 @@
         width: 9px;
         height: 9px;
         border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: fade(@secondary-text-color, 40%);
         transition: background-color 0.3s ease;
 
         &.is-active {
-            background-color: #FFFFFF;
+            background-color: @secondary-text-color;
         }
     }
 }
 
 .habitaciones {
     padding: 60px 20px;
-    background-color: #FBF7F2;
+    background-color: @primary-background-color;
 
     .content {
         max-width: 1100px;
@@ -119,15 +123,17 @@
     }
 
     &__nombre {
-        font-size: 2.2rem;
-        font-weight: 700;
-        color: #3A2E27;
+        font-family: @font-primary;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: @primary-text-color;
         margin-bottom: 12px;
     }
 
     &__descripcion {
+        font-family: @font-secondary;
         font-size: 1rem;
-        color: #6B5D50;
+        color: fade(@primary-text-color, 85%);
         max-width: 650px;
         margin: 0 auto 20px;
         line-height: 1.6;
@@ -141,36 +147,18 @@
         margin-bottom: 24px;
     }
 
-    &__detalle {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        background-color: #F7EFE5;
-        border: 1px solid #EAE0D5;
-        border-radius: 30px;
-        padding: 8px 16px;
-        font-size: 0.9rem;
-        color: #4A3F35;
-    }
-
-    &__amenidades {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        flex-wrap: wrap;
-        margin-bottom: 28px;
-    }
-
+    &__detalle,
     &__amenidad {
         display: flex;
         align-items: center;
         gap: 8px;
-        background-color: #F7EFE5;
-        border: 1px solid #EAE0D5;
+        background-color: @tertiary-background-color;
+        border: 1px solid fade(@primary-text-color, 15%);
         border-radius: 30px;
         padding: 8px 16px;
+        font-family: @font-secondary;
         font-size: 0.9rem;
-        color: #4A3F35;
+        color: @primary-text-color;
     }
 
     &__amenidad-icono {
@@ -186,22 +174,25 @@
     }
 
     &__precio {
-        font-size: 1.2rem;
+        font-family: @font-secondary;
+        font-size: 1.25rem;
         font-weight: 600;
-        color: #3A2E27;
+        color: @primary-text-color;
     }
 
     &__cta {
-        background-color: #C17A4E;
-        color: #FFFFFF;
+        background-color: @accent-background-color;
+        color: @secondary-text-color;
         padding: 12px 28px;
         border-radius: 8px;
         text-decoration: none;
+        font-family: @font-secondary;
         font-weight: 600;
-        transition: background-color 0.2s ease;
+        transition: background-color 0.2s ease, transform 0.2s ease;
 
         &:hover {
-            background-color: #A8623A;
+            background-color: @accent-secondary-background-color;
+            transform: translateY(-2px);
         }
     }
 
@@ -224,7 +215,7 @@
     position: relative;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     aspect-ratio: 4 / 3;
 
     &__img {
@@ -232,7 +223,7 @@
         height: 100%;
         object-fit: cover;
         display: block;
-        transition: transform 0.3s ease;
+        transition: transform 0.35s ease;
     }
 
     &:hover &__img {
@@ -244,9 +235,10 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
-        color: #FFFFFF;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+        color: @secondary-text-color;
         padding: 30px 16px 12px;
+        font-family: @font-secondary;
         font-weight: 600;
         font-size: 0.95rem;
     }

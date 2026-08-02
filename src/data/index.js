@@ -1,3 +1,4 @@
+import sharedContact from './shared.js';
 import indexContext from './pages/index_page.js';
 import nosotrosContext from './pages/nosotros_page.js';
 import contactoContext from './pages/contacto_page.js';
@@ -9,29 +10,43 @@ import promocionesContext from './pages/promociones_page.js';
 import reservacionesContext from './pages/reservaciones_page.js';
 
 export default (page) => {
-    console.log(`Cargando contexto de: ${page}`);
+    let pageContext = {};
+
     switch (page) {
         case '/index.html':
-            return indexContext;
+            pageContext = indexContext;
+            break;
         case '/nosotros.html':
-            return nosotrosContext;
+            pageContext = nosotrosContext;
+            break;
         case '/contacto.html':
-            return contactoContext;
+            pageContext = contactoContext;
+            break;
         case '/habitaciones.html':
-            return habitacionesContext;
+            pageContext = habitacionesContext;
+            break;
         case '/servicios.html':
-            return serviciosContext;
+            pageContext = serviciosContext;
+            break;
         case '/faq.html':
-            return faqContext;
+            pageContext = faqContext;
+            break;
         case '/testimonios.html':
-            return testimoniosContext;
+            pageContext = testimoniosContext;
+            break;
         case '/promociones.html':
-            return promocionesContext;
+            pageContext = promocionesContext;
+            break;
         case '/reservaciones.html':
-            return reservacionesContext;
-        case '/galeria.html':
-            return {};
+            pageContext = reservacionesContext;
+            break;
         default:
-            return {};
+            pageContext = {};
+            break;
     }
+
+    return {
+        contacto: sharedContact,
+        ...pageContext,
+    };
 };

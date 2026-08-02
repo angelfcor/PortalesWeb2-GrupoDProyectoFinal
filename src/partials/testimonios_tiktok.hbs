@@ -1,7 +1,7 @@
 <section class="testimonios">
     <div class="content">
         <div class="testimonios__header">
-            <h2 class="testimonios__title">No lo decimos nosotros,<br>Sus historias, nuestra mejor carta de presentación.</h2>
+            <h2 class="testimonios__title">No lo decimos nosotros,<br>Sus historias son nuestra mejor carta de presentación.</h2>
         </div>
         <div class="testimonios__muro">
             {{#each testimonios}}
@@ -17,13 +17,13 @@
                         </svg>
                     </div>
 
-                    {{#if this.tiktokVideoId}}
-                        <blockquote class="tiktok-embed" cite="{{this.tiktokUrl}}" data-video-id="{{this.tiktokVideoId}}">
-                            <section></section>
-                        </blockquote>
-                    {{/if}}
-
                     <p class="testimonio-card__texto">{{this.testimonio}}</p>
+
+                    {{#if this.tiktokUrl}}
+                        <div class="testimonio-card__footer" style="margin-top: 1rem;">
+                            <a href="{{this.tiktokUrl}}" target="_blank" rel="noopener noreferrer" style="color: inherit; font-size: 0.8rem; text-decoration: underline; opacity: 0.8;">Ver testimonio en TikTok ↗</a>
+                        </div>
+                    {{/if}}
                 </div>
             {{/each}}
         </div>
