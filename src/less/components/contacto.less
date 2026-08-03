@@ -23,6 +23,15 @@
         padding: 2rem 0 4rem;
     }
 
+    &__card {
+        background-color: @secondary-background-color;
+        color: @secondary-text-color;
+        border-radius: 20px;
+        border: 1px solid fade(@accent-secondary-background-color, 40%);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 0 20px fade(@accent-secondary-background-color, 15%);
+        padding: 2.5rem;
+    }
+
     &__body-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -42,14 +51,14 @@
         font-family: @font-primary;
         font-size: 1.5rem;
         font-weight: 500;
-        color: @primary-text-color;
+        color: @secondary-text-color;
         margin: 0 0 1.25rem;
     }
 
     &__info {
         font-family: @font-secondary;
         font-style: normal;
-        color: @primary-text-color;
+        color: @secondary-text-color;
 
         p {
             margin: 0 0 1rem;
@@ -57,11 +66,12 @@
         }
 
         a {
-            color: @accent-background-color;
+            color: @accent-secondary-background-color;
             text-decoration: none;
 
             &:hover {
-                color: @accent-secondary-background-color;
+                color: lighten(@accent-secondary-background-color, 12%);
+                text-decoration: underline;
             }
         }
     }
@@ -80,32 +90,38 @@
 
         label {
             font-weight: 500;
-            color: @primary-text-color;
+            color: @secondary-text-color;
         }
 
         input,
         textarea {
             width: 100%;
             padding: 0.65rem 0.8rem;
-            border: 1px solid darken(@primary-background-color, 15%);
-            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
             font-family: @font-secondary;
             font-size: 0.95rem;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: @secondary-text-color;
+
+            &::placeholder {
+                color: fade(@secondary-text-color, 45%);
+            }
 
             &:focus {
                 outline: none;
-                border-color: @accent-background-color;
+                border-color: @accent-secondary-background-color;
+                box-shadow: 0 0 10px fade(@accent-secondary-background-color, 40%);
             }
 
             &[aria-invalid='true'] {
-                border-color: #b3261e;
+                border-color: #ffb4ab;
             }
         }
     }
 
     &__form-error {
-        color: #b3261e;
+        color: #ffb4ab;
         font-size: 0.8rem;
         min-height: 1rem;
     }
@@ -130,7 +146,7 @@
     &__form-status {
         font-family: @font-secondary;
         font-weight: 500;
-        color: @primary-text-color;
+        color: @secondary-text-color;
     }
 
     &__mapa {

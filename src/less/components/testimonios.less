@@ -24,7 +24,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
-        align-items: start;
+        align-items: stretch;
 
         @media (max-width: 992px) {
             grid-template-columns: repeat(2, 1fr);
@@ -42,7 +42,8 @@
     border: 1px solid fade(@accent-secondary-background-color, 30%);
     border-radius: 16px;
     padding: 24px;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
     break-inside: avoid;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -99,5 +100,10 @@
         font-size: 0.95rem;
         color: fade(@secondary-text-color, 90%);
         line-height: 1.6;
+        flex-grow: 1;
+    }
+
+    &__footer {
+        margin-top: auto;
     }
 }

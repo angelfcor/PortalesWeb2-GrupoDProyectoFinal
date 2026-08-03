@@ -1,21 +1,3 @@
 {{> banner}}
 
-<section class="cardholder">
-    <div class="content">
-        <h2 class="cardholder__title">
-            Promociones Exclusivas
-        </h2>
-        <p class="cardholder__subtitle">
-            Aprovecha nuestras mejores ofertas para tu próxima estadía.
-        </p>
-        <div class="grid">
-            <div class="row justify-center">
-                {{#each promociones}}
-                <div class="col-12 col-md-6 col-lg-4 p-3">
-                    {{> promociones_card this}}
-                </div>
-                {{/each}}
-            </div>
-        </div>
-    </div>
-</section>
+{{> cardholder title="Nuestras Ofertas" subtitle="Aprovecha las mejores promociones para tu próxima estadía" items=promociones cols="col-lg-4" cardClass="card--cta-block"}}

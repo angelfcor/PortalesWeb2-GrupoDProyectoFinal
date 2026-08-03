@@ -41,6 +41,10 @@ export default {
         {
             imagen: "/img/aisle.jpeg",
             etiqueta: "Entrada"
+        },
+        {
+            imagen: "/img/wall.jpeg",
+            etiqueta: "Detalle"
         }
     ]
 };

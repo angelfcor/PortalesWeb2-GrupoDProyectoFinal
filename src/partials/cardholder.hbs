@@ -1,12 +1,12 @@
 <section class="cardholder">
     <div class="content">
-        <h2 class="cardholder__title">Nuestras Tarifas</h2>
-        <p class="cardholder__subtitle">Encuentra la opción perfecta para tu estadía</p>
+        <h2 class="cardholder__title">{{title}}</h2>
+        <p class="cardholder__subtitle">{{subtitle}}</p>
         <div class="grid">
             <div class="row justify-center">
-                {{#each tarifas}}
-                    <div class="col-12 col-md-6 col-lg-3 p-3">
-                        {{> card this}}
+                {{#each items}}
+                    <div class="col-12 col-md-6 {{../cols}} p-3">
+                        {{> card this class=../cardClass}}
                     </div>
                 {{/each}}
             </div>

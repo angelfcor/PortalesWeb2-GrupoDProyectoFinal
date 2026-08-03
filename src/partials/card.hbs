@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card {{class}}">
     <div class="card__header">
         <img src="{{card_img}}" alt="{{card_title}}" class="cover-img" loading="lazy"/>
         <span class="card__label">{{card_label}}</span>
@@ -8,7 +8,9 @@
         <p class="card__description">{{card_description}}</p>
     </div>
     <div class="card__footer">
-        <span class="card__price">HND {{card_price}}</span>
+        {{#if card_price}}
+            <span class="card__price">HND {{card_price}}</span>
+        {{/if}}
         <a class="card__cta" href="./reservaciones.html">{{card_cta}}</a>
     </div>
 </div>
