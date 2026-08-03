@@ -11,6 +11,8 @@
         {{#if card_price}}
             <span class="card__price">HND {{card_price}}</span>
         {{/if}}
-        <a class="card__cta" href="./reservaciones.html">{{card_cta}}</a>
+        {{#if card_cta}}
+            <a class="card__cta" href="./reservaciones.html">{{card_cta}}</a>
+        {{/if}}
     </div>
 </div>

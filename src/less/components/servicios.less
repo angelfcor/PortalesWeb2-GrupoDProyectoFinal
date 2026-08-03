@@ -27,11 +27,11 @@
     height: 100%;
     width: 100%;
     text-align: center;
-    box-shadow: 0 4px 16px rgba(56, 44, 35, 0.2);
+    box-shadow: 0 4px 16px fade(@secondary-background-color, 20%);
     transition: box-shadow 0.25s ease, transform 0.25s ease;
 
     &:hover {
-        box-shadow: 0 10px 24px rgba(56, 44, 35, 0.3);
+        box-shadow: 0 10px 24px fade(@secondary-background-color, 30%);
         transform: translateY(-3px);
     }
 

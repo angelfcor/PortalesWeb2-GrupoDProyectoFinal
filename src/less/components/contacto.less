@@ -26,7 +26,7 @@
     &__card {
         background-color: @secondary-background-color;
         color: @secondary-text-color;
-        border-radius: 20px;
+        border-radius: @radius-xl;
         border: 1px solid fade(@accent-secondary-background-color, 40%);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 0 20px fade(@accent-secondary-background-color, 15%);
         padding: 2.5rem;
@@ -37,7 +37,7 @@
         grid-template-columns: 1fr;
         gap: 2.5rem;
 
-        @media (min-width: 768px) {
+        @media (min-width: #break-points[tablet]) {
             grid-template-columns: 5fr 7fr;
         }
     }
@@ -98,7 +98,7 @@
             width: 100%;
             padding: 0.65rem 0.8rem;
             border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 8px;
+            border-radius: @radius-m;
             font-family: @font-secondary;
             font-size: 0.95rem;
             background-color: rgba(255, 255, 255, 0.05);
@@ -130,7 +130,7 @@
         align-self: flex-start;
         padding: 0.75rem 1.75rem;
         border: none;
-        border-radius: 4px;
+        border-radius: @radius-s;
         background-color: @accent-background-color;
         color: @secondary-text-color;
         font-family: @font-secondary;

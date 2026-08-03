@@ -11,7 +11,7 @@
     &__hero-overlay {
         position: absolute;
         inset: 0;
-        background-color: rgba(56, 44, 35, 0.6);
+        background-color: fade(@secondary-background-color, 60%);
         display: flex;
         align-items: center;
     }
@@ -54,7 +54,7 @@
         width: 100%;
         height: 340px;
         object-fit: cover;
-        border-radius: 8px;
+        border-radius: @radius-m;
     }
 
     &__section-title {
@@ -87,14 +87,14 @@
         width: 100%;
         height: 100%;
         background-color: @secondary-background-color;
-        border-radius: 8px;
+        border-radius: @radius-m;
         padding: 1.75rem 1.5rem;
-        box-shadow: 0 4px 16px rgba(56, 44, 35, 0.25);
+        box-shadow: @shadow-card;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
 
         &:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(56, 44, 35, 0.35);
+            box-shadow: @shadow-card-hover;
         }
     }
 

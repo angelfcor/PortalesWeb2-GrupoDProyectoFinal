@@ -15,17 +15,21 @@
 @radius-s: 4px;
 @radius-m: 8px;
 @radius-l: 16px;
+@radius-xl: 20px;
 @radius-pill: 50px;
 
-@shadow-card: 0 4px 16px rgba(56, 44, 35, 0.25);
-@shadow-card-hover: 0 8px 24px rgba(56, 44, 35, 0.35);
+@shadow-card: 0 4px 16px fade(@secondary-background-color, 25%);
+@shadow-card-hover: 0 8px 24px fade(@secondary-background-color, 35%);
 
 @card-image-height: 200px;
 @card-padding: 1.25rem;
 @section-padding: 4rem 0;
 
 #break-points {
+    small: 480px;
+    mobile: 600px;
     tablet: 768px;
+    narrow: 992px;
     desktop: 1025px;
     wide: 2300px;
 }

@@ -1,12 +1,12 @@
 <section class="cardholder">
     <div class="content">
-        <h2 class="cardholder__title">{{title}}</h2>
-        <p class="cardholder__subtitle">{{subtitle}}</p>
+        <h2 class="cardholder__title">{{cardholder.title}}</h2>
+        <p class="cardholder__subtitle">{{cardholder.subtitle}}</p>
         <div class="grid">
             <div class="row justify-center">
-                {{#each items}}
-                    <div class="col-12 col-md-6 {{../cols}} p-3">
-                        {{> card this class=../cardClass}}
+                {{#each cardholder.items}}
+                    <div class="col-12 col-md-6 {{@root.cardholder.cols}} p-3">
+                        {{> card}}
                     </div>
                 {{/each}}
             </div>

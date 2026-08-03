@@ -56,7 +56,7 @@
         font-weight: 600;
         margin-bottom: 12px;
 
-        @media (max-width: 600px) {
+        @media (max-width: #break-points[mobile]) {
             font-size: 2.25rem;
         }
     }
@@ -73,7 +73,7 @@
         background-color: @accent-background-color;
         color: @secondary-text-color;
         padding: 14px 32px;
-        border-radius: 8px;
+        border-radius: @radius-m;
         text-decoration: none;
         font-family: @font-secondary;
         font-weight: 600;
@@ -192,7 +192,7 @@
         background-color: @accent-background-color;
         color: @secondary-text-color;
         padding: 12px 28px;
-        border-radius: 8px;
+        border-radius: @radius-m;
         text-decoration: none;
         font-family: @font-secondary;
         font-weight: 600;
@@ -209,11 +209,11 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
 
-        @media (max-width: 768px) {
+        @media (max-width: #break-points[tablet]) {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: #break-points[small]) {
             grid-template-columns: 1fr;
         }
     }
@@ -221,7 +221,7 @@
 
 .galeria-card {
     position: relative;
-    border-radius: 16px;
+    border-radius: @radius-l;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     aspect-ratio: 4 / 3;

@@ -1,6 +1,7 @@
 .banner {
     width: 100%;
     min-height: 45vh;
+    background-image: var(--banner-img);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -8,7 +9,7 @@
     &__overlay {
         position: absolute;
         inset: 0;
-        background-color: rgba(56, 44, 35, 0.6);
+        background-color: fade(@secondary-background-color, 60%);
         display: flex;
         align-items: center;
     }

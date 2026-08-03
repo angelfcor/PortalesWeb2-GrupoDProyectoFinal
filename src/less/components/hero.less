@@ -9,7 +9,7 @@
     &__overlay {
         position: absolute;
         inset: 0;
-        background-color: rgba(56, 44, 35, 0.55);
+        background-color: fade(@secondary-background-color, 55%);
         display: flex;
         align-items: center;
     }
@@ -46,7 +46,7 @@
         color: @secondary-text-color;
         text-decoration: none;
         padding: 0.75rem 1.5rem;
-        border-radius: 4px;
+        border-radius: @radius-s;
         margin-top: 0.5rem;
         transition: background-color 0.2s ease;
 

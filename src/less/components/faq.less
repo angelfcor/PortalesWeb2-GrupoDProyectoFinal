@@ -32,9 +32,9 @@
 
 .pregunta {
     background-color: @secondary-background-color;
-    border-radius: 8px;
+    border-radius: @radius-m;
     padding: 1.1rem 1.4rem;
-    box-shadow: 0 3px 12px rgba(56, 44, 35, 0.18);
+    box-shadow: 0 3px 12px fade(@secondary-background-color, 18%);
 
     &[open] {
         .pregunta__icono {
