@@ -8,6 +8,7 @@ import faqContext from './pages/faq_page.js';
 import testimoniosContext from './pages/testimonios_page.js';
 import promocionesContext from './pages/promociones_page.js';
 import reservacionesContext from './pages/reservaciones_page.js';
+import galeriaContext from './pages/galeria_page.js';
 
 export default (page) => {
     let pageContext = {};
@@ -15,6 +16,9 @@ export default (page) => {
     switch (page) {
         case '/index.html':
             pageContext = indexContext;
+            break;
+        case '/galeria.html':
+            pageContext = galeriaContext;
             break;
         case '/nosotros.html':
             pageContext = nosotrosContext;
