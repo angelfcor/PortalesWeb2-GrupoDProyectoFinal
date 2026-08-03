@@ -1,4 +1,5 @@
 import indexContext from './pages/index_page';
+import galeriaContext from './pages/galeria_page.js';
 /*
 import habitacionesContext from './pages/habitaciones_page';
 import serviciosContext from './pages/servicios_page';
@@ -9,6 +10,8 @@ export default (page) => {
     switch(page) {
         case '/index.html':
             return indexContext;
+        case '/galeria.html':
+            return galeriaContext;
             /*
         case '/nosotros.html':
             return {};

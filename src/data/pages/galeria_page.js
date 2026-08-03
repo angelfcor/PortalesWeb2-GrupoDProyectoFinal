@@ -1,5 +1,3 @@
-import contacto from "../shared.js";
-
 export default {
     galeria: [
         {
@@ -50,7 +48,5 @@ export default {
             card_img: "/img/panoramic.jpeg",
             card_label: "Panorámica"
         }
-    ],
-
-    contacto,
+    ]
 }
