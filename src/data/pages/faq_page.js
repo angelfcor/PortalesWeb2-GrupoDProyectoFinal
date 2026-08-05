@@ -28,9 +28,4 @@ export default {
             respuesta: "Por el momento no contamos con servicio para mascotas. Si tienes un caso especial, puedes consultarnos directamente al hotel.",
         },
     ],
-    contacto: {
-        direccion: "Costado Norte de la Iglesia Los Dolores, Centro de Tegucigalpa",
-        telefono1: "9733-5556",
-        telefono2: "8973-7935",
-    },
 };

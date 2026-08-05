@@ -52,9 +52,4 @@ export default {
             autor: "Cliente verificado"
         },
     ],
-    contacto: {
-        direccion: "Costado Norte de la Iglesia Los Dolores, Centro de Tegucigalpa",
-        telefono1: "9733-5556",
-        telefono2: "8973-7935",
-    }
 }
