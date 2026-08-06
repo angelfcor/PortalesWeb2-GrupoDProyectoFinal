@@ -7,6 +7,8 @@ Edwin Rene Acosta Rodríguez 0101200504493
 Frankie Gustavo Ayes Chinchilla 0801200709265  
 Astrid Jissel Girón Diaz 0801200708358  
 Daniel Alejandro Lobo Espinal 0801200102089  
+Kassandra del Rosario Hernandez 0801200521928
+
 
 ## Repositorio
 https://github.com/angelfcor/PortalesWeb2-GrupoDProyectoFinal
